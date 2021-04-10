@@ -2,11 +2,14 @@ class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
 
   # GET /users or /users.json
+  # 動作を指定しなかった場合app/views/users/index.html.erbが実行される
+
   def index
-    @users = User.all
+     @users = User.all
   end
 
   # GET /users/1 or /users/1.json
+  # 動作を指定しなかった場合app/views/users/show.htmlが実行される
   def show
   end
 
